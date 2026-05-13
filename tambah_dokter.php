@@ -80,11 +80,38 @@
 			<label>No HP Dokter</label>
 			<input type="text" name="nohp_dokter" class="form_login" placeholder="No HP Dokter .." required="required">
  
- 			<label>ID Poli</label>
-			<input type="number" name="id_poli" class="form_login" placeholder="ID Poli .." required="required">
+			<label>Keterangan</label>
+			<br>
+			<select name="keterangan_dokter" id="keterangan_dokter">
+			  <option>--Pilih Keterangan--</option>
+			  <option>Ada</option>
+			  <option>Tidak</option>
+		    </select>
+			<br>
+			<br>
 
-			<label>Keterangan Dokter</label>
-			<input type="text" name="keterangan_dokter" class="form_login" placeholder="Keterangan Dokter .." required="required">
+			<label>Identitas Poli</label>
+			<br>
+			<select name="id_poli" id="id_poli" onChange="tampilPoli()" required>
+       			<option value="">--Pilih Poli--</option>
+
+        			<?php
+						include("koneksi.php");
+        				$sql = "SELECT * FROM poli";
+        				$result = mysqli_query($connect, $sql);
+
+        				while ($row = mysqli_fetch_assoc($result)) 
+						{
+            				echo "<option value='".$row['id_poli']."' data-nama='".$row['nama_poli']."'>"
+                    		.$row['id_poli']." - ".$row['nama_poli'].
+                 			"</option>";
+        				}
+        			?>
+		  </select>
+				<br>
+				<br>
+			<label>Nama Poli</label>
+			<input type="text" name="nama_poli" class="form_login" id="nama_poli" readonly>
 			
 			<input type="submit" class="tombol_login" value="SAVE">
  
@@ -94,5 +121,16 @@
 		
 	</div>
     </div>
+
+	<script>
+		function tampilPoli() {
+			var select = document.getElementById('id_poli');
+			var selectedOption = select.options[select.selectedIndex];
+			var namaPoli = selectedOption.getAttribute('data-nama');
+			
+			// Set nilai pada input nama_poli, jika belum ada yang terpilih maka kosongkan
+			document.getElementById('nama_poli').value = namaPoli ? namaPoli : '';
+		}
+	</script>
 </body>
 </html>
