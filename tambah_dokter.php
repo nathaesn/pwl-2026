@@ -70,7 +70,7 @@
 <div class="kotak_login">
 		<p class="tulisan_login">Tambah Dokter</p>
  
-			<form action="save_dokter.php" method="post">
+			<form action="save_dokter.php" method="post" enctype="multipart/form-data">
 			<label>Nama Dokter</label>
 			<input type="text" name="nama_dokter" class="form_login" placeholder="Nama Dokter .." required="required">
 			
@@ -112,6 +112,13 @@
 				<br>
 			<label>Nama Poli</label>
 			<input type="text" name="nama_poli" class="form_login" id="nama_poli" readonly>
+
+			<label>Foto Dokter</label><br>
+			<input type="file" name="foto_dokter" accept="image/*" onChange="previewFoto(event)" required>
+			<br>
+			<img id="preview" width="100" height="100" style="display:none;">
+			<br/>
+
 			
 			<input type="submit" class="tombol_login" value="SAVE">
  
@@ -130,6 +137,18 @@
 			
 			// Set nilai pada input nama_poli, jika belum ada yang terpilih maka kosongkan
 			document.getElementById('nama_poli').value = namaPoli ? namaPoli : '';
+		}
+
+		function previewFoto(event) {
+			var reader = new FileReader();
+			reader.onload = function() {
+				var output = document.getElementById('preview');
+				output.src = reader.result;
+				output.style.display = 'block';
+			};
+			if (event.target.files[0]) {
+				reader.readAsDataURL(event.target.files[0]);
+			}
 		}
 	</script>
 </body>

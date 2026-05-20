@@ -85,6 +85,7 @@
 				<th>No HP</th>	
 				<th>ID Poli</th>	
 				<th>Keterangan</th>	
+                <th>Foto</th>
                 <th>Action</th>
             </tr>
             
@@ -113,6 +114,9 @@
                                     </td>
                                     <td>
                                         <?php echo $data['keterangan_dokter'];?>
+                                    </td>
+                                    <td>
+                                        <img src="foto/<?php echo $data['foto_dokter'];?>" width="100px">
                                     </td>
                                     <td>
                                         <?php 
