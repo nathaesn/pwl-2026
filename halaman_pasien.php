@@ -65,6 +65,7 @@
             <li><a href="login.php">Home</a></li>
             <li><a href="manage_dokter.php">Manage Dokter</a></li>
 			<li><a href="manage_pasien.php">Manage Pasien</a></li>
+			<li><a href="manage_daftar.php">Daftar Periksa</a></li>
         </ul>
     </div>
 </body>
