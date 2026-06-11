@@ -11,6 +11,11 @@
 	$query = "INSERT INTO user (nama, username, password, level) VALUES('".$nama."', '".$username."', '".$password."', '".$level."')";
 	$sql = mysqli_query($connect,$query); // Eksekusi/ Jalankan query dari variabel $query
 	
+	if($level == 'pasien'){
+		$query1 = "INSERT INTO pasien VALUES(NULL, '".$nama."', '', '', '', '')";
+		$sql1 = mysqli_query($connect,$query1); // Eksekusi/ Jalankan query dari variabel $query
+	}
+	
 	if($sql){ // Cek jika proses simpan ke database sukses atau tidak
 	// Jika Sukses, Lakukan :
 	header("location: manage_user.php"); // Redirect ke halaman manage_user.php

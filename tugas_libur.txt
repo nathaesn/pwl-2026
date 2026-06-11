@@ -1,0 +1,12 @@
+Tugas selama libur (capaian pribadi)
+1. setiap registrasi data harus tersimpan di tabel user
+   (semua record dan semua filed) dan tersimpan di tabel
+   pasien (1 record dan field id_pasien, nama_pasien)
+   nama_pasien (tabel pasien) dan nama_user (tabel user)
+2. membuat halaman_poli (masuk dalam halaman_admin, 
+   manage_poli, tambah_poli, edit_poli, hapus_poli, 
+   update_poli
+3. membuat halaman_pasien, manage_pasien, tambah_pasien, 
+   edit_pasien, hapus_pasien, update_pasien
+4. halaman_pasien berisi menu home, manage_pasien,
+   manage_daftar dan manage_periksa

@@ -13,6 +13,10 @@ include("koneksi.php");
 	$query="UPDATE user SET nama='$nama', username='$username', password='$password', level='$level' WHERE id='$id'";
     $result = mysqli_query($connect,$query);
     
-    // Redirect to homepage to display updated user in list
+	 // update pasien data (hanya jika level adalah pasien)
+	 if($level == 'pasien'){
+		$query1="UPDATE pasien SET nama_pasien='$nama' WHERE id_pasien='$id'";
+	    $result1 = mysqli_query($connect,$query1);
+	 }
    	header("Location:manage_user.php");
 ?>
