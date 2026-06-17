@@ -62,9 +62,10 @@
         </div>
         <ul>
             <li><a href="halaman_admin.php">Home</a></li>
-            <li><a href="manage_user.php">Manage User</a></li>
-            <li><a href="manage_dokter.php">Manage Dokter</a></li>
-            <li><a href="manage_pasien.php">Manage Pasien</a></li>
+            <li><a href="manage_dokter.php">Dokter</a></li>
+            <li><a href="manage_user.php">User</a></li>
+            <li><a href="manage_pasien.php">Pasien</a></li>
+            <li><a href="manage_pemeriksaan_pasien.php">Periksa</a></li>
         </ul>
     </div>
 </body>

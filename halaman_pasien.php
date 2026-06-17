@@ -63,9 +63,10 @@
         </div>
         <ul>
             <li><a href="halaman_pasien.php">Home</a></li>
-            <li><a href="manage_pasien.php">Manage Pasien</a></li>
-			<li><a href="manage_daftar.php">Manage Daftar</a></li>
-			<li><a href="manage_antrian.php">Manage Antrian</a></li>
+			<li><a href="manage_pasien.php">Pasien</a></li>
+			<li><a href="manage_daftar.php">Daftar</a></li>
+			<li><a href="manage_antrian_daftar_pasien.php">Antrian</a></li>
+
         </ul>
     </div>
 </body>

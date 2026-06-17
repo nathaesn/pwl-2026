@@ -62,9 +62,9 @@
             <h6><?php getLevel($level) ?></h6>
         </div>
         <ul>
-            <li><a href="login.php">Home</a></li>
-            <li><a href="manage_dokter.php">Manage Dokter</a></li>
-			<li><a href="manage_pasien.php">Manage Pasien</a></li>
+            <li><a href="halaman_dokter.php">Home</a></li>
+			<li><a href="perbaikan_manage_data_dokter.php">Update</a></li>
+			<li><a href="manage_pemeriksaan_pasien.php">Pemeriksaan</a></li>
         </ul>
     </div>
 </body>

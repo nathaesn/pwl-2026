@@ -262,6 +262,8 @@
 				echo "showInfoModal('Pendaftaran Berhasil', 'Anda berhasil mendaftar.\\nNomor Antrian: $no');";
 			} else if($_GET['pesan'] == "penuh"){
 				echo "showInfoModal('Antrian Penuh', 'Maaf, kuota antrian untuk hari ini sudah penuh.');";
+			} else if($_GET['pesan'] == "sudah_daftar"){
+				echo "showInfoModal('Sudah Terdaftar', 'Anda sudah mendaftar ke dokter ini hari ini.');";
 			}
 		}
 		?>
